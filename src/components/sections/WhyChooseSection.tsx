@@ -8,18 +8,16 @@ const WhyChooseSection: React.FC = () => {
   const inView = useInView(ref, { amount: 0.5, once: false });
 
   return (
-    <Container className="w-[80%]">
+    <Container className="w-[95%] md:w-[80%]">
       <section
         id="why-choose-parkatech"
-        className="bg-[rgba(3,19,23,1)] py-[180px]"
+        className="py-[50px] md:py-[180px]"
       >
-        <div className="flex items-center gap-[40px_76px] flex-wrap -mb-9 max-md:max-w-full max-md:mb-2.5">
-          <h2 className="self-stretch min-w-60 gap-2.5 text-[100px] text-[#E8F9FC] font-medium leading-[104px] w-[442px] my-auto max-md:text-[40px] max-md:leading-[46px] max-md:max-w-full">
-            Why <br />
-            Choose <br />
-            Parka?
+        <div className="block md:flex items-center justify-between gap-[10rem] mb-2.5">
+          <h2 className="self-stretch text-center md:text-left gap-2.5 text-[32px] md:text-[50px] xl:text-[100px] text-[#E8F9FC] font-medium xl:leading-[104px] w-[100%] md:w-[10%] xl:w-[30%] my-auto leading-[66px]">
+            Why Choose Parka?
           </h2>
-          <div className="self-stretch flex min-w-60 flex-col items-center gap-5 text-black leading-none w-[790px] my-auto max-md:max-w-full">
+          <div className="flex flex-col gap-3 md:gap-5 text-black leading-none my-auto w-[100%]">
             <motion.div
               ref={ref}
               data-index={1}

@@ -6,11 +6,11 @@ const AboutSection: React.FC = () => {
   return (
     <Container>
       <section
+        id="about-us"
         className="justify-center items-center relative bg-[#CAF0F8] flex w-full flex-col overflow-hidden px-20 py-[142px] max-md:max-w-full max-md:px-5 max-md:py-[70px]"
-        id="about"
       >
-        <Container className="w-[55%]">
-          <div className="text-[#031317] text-center font-light text-[24px] leading-[45px] max-md:text-[40px] max-md:leading-[38px]">
+        <Container className="md:w-[55%]">
+          <div className="text-[#031317] text-center font-light text-[16px] md:text-[24px] leading-[45px] max-md:leading-[38px]">
             We transform freelance sales agents by connecting them with
             lucrative opportunities to sell premium smartphones and high-demand
             products. Our platform and financing partnerships create a seamless

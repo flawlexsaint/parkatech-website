@@ -10,7 +10,7 @@ import {
 
 export default function Home() {
   return (
-    <div className="bg-[#021114] text-white font-sans">
+    <div className="bg-[#021114] text-white font-sans" id="home">
       <Navbar />
       <main>
         <HeroSection />

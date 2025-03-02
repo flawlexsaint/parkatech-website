@@ -1,4 +1,3 @@
-
 import React from "react";
 import { cn } from "@/lib/utils";
 
@@ -16,12 +15,14 @@ const ReasonCard: React.FC<ReasonCardProps> = ({
   return (
     <div
       className={cn(
-        "justify-center items-stretch flex min-h-[122px] max-w-full w-[790px] flex-col font-normal px-8 py-[25px] rounded-[20px] max-md:px-5",
-        bgColor,
+        "flex min-h-[100px] w-full flex-col font-normal py-[25px] px-6 rounded-[20px] max-md:px-5",
+        bgColor
       )}
     >
-      <h3 className="text-2xl font-semibold">{title}</h3>
-      <p className="text-xl mt-1.5 max-md:max-w-full">{description}</p>
+      <h3 className="text-[16px] md:text-2xl font-semibold">{title}</h3>
+      <p className="text-[14px] md:text-xl mt-1.5 max-md:max-w-full">
+        {description}
+      </p>
     </div>
   );
 };

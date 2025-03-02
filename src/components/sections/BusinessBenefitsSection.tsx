@@ -6,13 +6,13 @@ import Container from "../Container";
 
 const BusinessBenefitsSection: React.FC = () => {
   return (
-    <Container className="max-md:py-[100px] py-[173px]">
+    <Container className="py-[68px] xl:py-[173px]">
       <section
         className="justify-center items-center flex w-full flex-col overflow-hidden px-20 max-md:max-w-full max-md:px-5 "
         id="benefits"
       >
         <div className="w-full max-w-[1139px] -mb-6 max-md:max-w-full max-md:mb-2.5">
-          <h2 className="text-[#E8F9FC] text-center text-[48px] font-medium leading-[77px] max-md:max-w-full max-md:text-[40px] max-md:leading-[48px]">
+          <h2 className="text-[#E8F9FC] text-center text-[32px] xl:text-[48px] font-medium leading-[77px] max-md:max-w-full  max-md:leading-[48px]">
             Benefits for Business
           </h2>
           <div className="flex w-full gap-[24px_74px] flex-wrap mt-[83px] max-md:max-w-full max-md:mt-[50px]">
@@ -32,12 +32,15 @@ const BusinessBenefitsSection: React.FC = () => {
           </div>
         </div>
       </section>
-      <div className="flex items-center justify-center my-[74px]">
-        <button className="h-[58px] rounded-[12px] font-semibold text-[20px] text-[#031317] lg:min-w-[552px] min-w-full bg-white">
-          Contact Us
-        </button>
-      </div>
-      <Container className="bg-[#12212599] py-[47px] w-[65%] rounded-[20px]">
+      <Container className="w-[90%]">
+        <div className="flex items-center justify-center my-[74px]">
+          <button className="h-[58px] rounded-[12px] font-semibold text-[20px] text-[#031317] md:min-w-[552px] min-w-full bg-white">
+            Contact Us
+          </button>
+        </div>
+      </Container>
+
+      <Container className="bg-[#12212599] py-[47px] w-[90%] md:w-[65%] rounded-[20px]">
         <Container className="w-[80%]">
           <h1 className="text-center text-white font-semibold text-[40px]">
             Earn Serious Money in Your Free Time

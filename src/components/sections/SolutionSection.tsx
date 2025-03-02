@@ -8,25 +8,27 @@ import Image from "next/image";
 
 export function SolutionSection() {
   return (
-    <Container className="w-[80%] my-[174px]">
-      <Container className="mb-[48px]">
-        <h1 className="text-center font-semibold text-[80px] text-[#E8F9FC]">
-          Our Solution
-        </h1>
+    <div id="our-solution">
+      <Container className="w-[95%] md:w-[80%] py-[60px] md:py-[174px]">
+        <Container className="mb-[48px]">
+          <h1 className="text-center font-semibold text-[36px] md:text-[80px] text-[#E8F9FC]">
+            Our Solution
+          </h1>
+        </Container>
+        <ul className="grid grid-cols-1 grid-rows-none gap-4 md:grid-cols-2 lg:gap-4 xl:max-h-[34rem]">
+          {OUR_SOLUTIONS?.map(({ title, description, icon }, i) => (
+            <GridItem
+              {...{
+                icon,
+                title,
+                description,
+              }}
+              key={i}
+            />
+          ))}
+        </ul>
       </Container>
-      <ul className="grid grid-cols-1 grid-rows-none gap-4 md:grid-cols-2 lg:gap-4 xl:max-h-[34rem]">
-        {OUR_SOLUTIONS?.map(({ title, description, icon }, i) => (
-          <GridItem
-            {...{
-              icon,
-              title,
-              description,
-            }}
-            key={i}
-          />
-        ))}
-      </ul>
-    </Container>
+    </div>
   );
 }
 
@@ -47,10 +49,12 @@ const GridItem = ({ icon, title, description }: GridItemProps) => {
           <div className="relative flex flex-1 flex-col justify-between gap-3">
             <Image src={icon} alt={title} width={64} height={64} />
             <div className="space-y-3">
-              <h3 className="pt-0.5 text-white text-[24px] font-medium md:text-2xl/[1.875rem] dark:text-white">
+              <h3 className="pt-0.5 text-white text-[20px] md:text-[24px] font-medium md:text-2xl/[1.875rem] dark:text-white">
                 {title}
               </h3>
-              <h2 className="text-[16px] text-white">{description}</h2>
+              <h2 className="text-[14px] md:text-[16px] text-white">
+                {description}
+              </h2>
             </div>
           </div>
         </div>

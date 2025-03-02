@@ -1,7 +1,6 @@
 "use client";
 
-import { motion, useAnimation } from "framer-motion";
-import { useEffect } from "react";
+import { motion } from "framer-motion";
 import ABOUT_1 from "../../../public/assets/images/IMG_1.jpg";
 import ABOUT_2 from "../../../public/assets/images/IMG_2.jpg";
 import ABOUT_3 from "../../../public/assets/images/IMG_3.jpg";
@@ -24,34 +23,17 @@ const images = [
 ];
 
 export default function InfiniteImageCarousel() {
-  // const controls = useAnimation();
-
-  // useEffect(() => {
-  //   const startInfiniteScroll = async () => {
-  //     while (true) {
-  //       await controls.start({
-  //         x: ["0%", "-50%"],
-  //         transition: { duration: 60, ease: "linear" },
-  //       });
-  //       await controls.set({ x: "0%" });
-  //     }
-  //   };
-
-  //   startInfiniteScroll();
-  // }, [controls]);
-
   return (
     <div className="relative w-full overflow-hidden backdrop-blur-sm">
       <motion.div
-        className="flex space-x-6"
-        // animate={{ x: "-50%" }}
-        animate={{ x: ["0%", "-50%"] }} // Move halfway since it's duplicated
         initial={{ x: "0%" }}
+        className="flex space-x-6"
+        animate={{ x: ["0%", "-50%"] }}
         transition={{
+          duration: 100,
+          ease: "linear",
           repeat: Infinity,
           repeatType: "loop",
-          duration: 60,
-          ease: "linear",
         }}
       >
         {[...images, ...images].map((src, index) => (
