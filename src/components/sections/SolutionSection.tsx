@@ -1,69 +1,61 @@
+"use client";
 
-import React from "react";
-import SolutionCard from "../SolutionCard";
+import { GlowingEffect } from "@/components/ui/glowing-effect";
+import { OUR_SOLUTIONS } from "@/constants/data";
+import { GridItemProps } from "@/types";
+import Container from "../Container";
+import Image from "next/image";
 
-const SolutionSection: React.FC = () => {
+export function SolutionSection() {
   return (
-    <section
-      className="justify-center items-center bg-[#031317] flex w-full flex-col overflow-hidden px-20 py-[173px] max-md:max-w-full max-md:px-5 max-md:py-[100px]"
-      id="solution"
-    >
-      <div className="mb-[-34px] w-full max-w-[1182px] max-md:max-w-full max-md:mb-2.5">
-        <h2 className="text-[#E8F9FC] text-center text-[80px] font-semibold leading-none max-md:max-w-full max-md:text-[40px]">
-          Our Solution{" "}
-        </h2>
-        <div className="flex w-full gap-[24px_22px] flex-wrap mt-12 max-md:max-w-full max-md:mt-10">
-          <div className="flex min-w-60 items-center gap-6 flex-wrap grow shrink w-[946px] max-md:max-w-full">
-            <SolutionCard
-              icon={
-                <div className="self-stretch flex w-16 items-center gap-2.5 overflow-hidden my-auto px-3">
-                  <img
-                    src="https://cdn.builder.io/api/v1/image/assets/TEMP/d115930b4b2fb755969eb32f40385d0c38a1741c026c5715868e83c97a470b03?placeholderIfAbsent=true"
-                    alt="Phone icon"
-                    className="aspect-[0.63] object-contain w-10 fill-[#4BCDE7] self-stretch my-auto"
-                  />
-                </div>
-              }
-              title="Premium Products"
-              description="Access a wide range of top-quality smartphones and popular products from trusted suppliers."
-            />
-            <SolutionCard
-              icon={
-                <div className="self-stretch flex min-h-[63px] gap-2.5 my-auto py-[5px]" />
-              }
-              title="Easy Financing"
-              description="Partnered with leading financiers to offer customers flexible payment plans, helping you close more sales."
-            />
-          </div>
-          <div className="flex min-w-60 items-center gap-[22px] flex-wrap max-md:max-w-full">
-            <SolutionCard
-              icon={
-                <div className="self-stretch flex w-16 items-center gap-2.5 overflow-hidden my-auto p-2">
-                  <img
-                    src="https://cdn.builder.io/api/v1/image/assets/TEMP/2a4417b580c35fb72de02376fa2a9c14a87866a2625a321bbf43c636b59bfe62?placeholderIfAbsent=true"
-                    alt="Money bag icon"
-                    className="aspect-[1] object-contain w-12 fill-[#4BCDE7] self-stretch my-auto"
-                  />
-                </div>
-              }
-              title="Unlimited Earnings"
-              description="Earn competitive commissions with no cap. Your income grows with your performance."
-            />
-            <SolutionCard
-              icon={
-                <img
-                  src="https://cdn.builder.io/api/v1/image/assets/TEMP/6a8da861b990c2f178f3c917e9e5d93489276c6ff4c2c0daa82e54bb1a43073c?placeholderIfAbsent=true"
-                  alt="Laptop icon"
-                  className="aspect-[1] object-contain w-16 self-stretch my-auto"
-                />
-              }
-              title="Intuitive Platform"
-              description="Manage sales, track commissions, and handle transactions in real-time from one easy-to-use dashboard."
-            />
+    <Container className="w-[80%] my-[174px]">
+      <Container className="mb-[48px]">
+        <h1 className="text-center font-semibold text-[80px] text-[#E8F9FC]">
+          Our Solution
+        </h1>
+      </Container>
+      <ul className="grid grid-cols-1 grid-rows-none gap-4 md:grid-cols-2 lg:gap-4 xl:max-h-[34rem]">
+        {OUR_SOLUTIONS?.map(({ title, description, icon }, i) => (
+          <GridItem
+            {...{
+              icon,
+              title,
+              description,
+            }}
+            key={i}
+          />
+        ))}
+      </ul>
+    </Container>
+  );
+}
+
+const GridItem = ({ icon, title, description }: GridItemProps) => {
+  return (
+    <li className="min-h-[14rem] list-none bg-[#FFFFFF0F] rounded-[25px]">
+      <div className="relative h-full rounded-[25px] p-2 md:p-3">
+        <GlowingEffect
+          blur={0}
+          spread={40}
+          glow={true}
+          proximity={64}
+          borderWidth={2}
+          disabled={false}
+          inactiveZone={0.01}
+        />
+        <div className="relative flex h-full flex-col justify-between gap-6 overflow-hidden rounded-xl border-0.75 p-6  dark:shadow-[0px_0px_27px_0px_#2D2D2D] md:p-6">
+          <div className="relative flex flex-1 flex-col justify-between gap-3">
+            <Image src={icon} alt={title} width={64} height={64} />
+            <div className="space-y-3">
+              <h3 className="pt-0.5 text-white text-[24px] font-medium md:text-2xl/[1.875rem] dark:text-white">
+                {title}
+              </h3>
+              <h2 className="text-[16px] text-white">{description}</h2>
+            </div>
           </div>
         </div>
       </div>
-    </section>
+    </li>
   );
 };
 

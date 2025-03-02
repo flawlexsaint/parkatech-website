@@ -3,7 +3,7 @@ import React from "react";
 import { useForm } from "react-hook-form";
 import { z } from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
-import { Button } from "../components/ui/Button";
+// import { Button } from "../components/ui/Button";
 
 const formSchema = z.object({
   fullName: z
@@ -135,14 +135,14 @@ const JoinForm: React.FC = () => {
         )}
       </div>
 
-      <Button
+      {/* <Button
         variant="secondary"
         type="submit"
         disabled={isSubmitting}
         className="w-full"
       >
         {isSubmitting ? "Processing..." : "Join Now"}
-      </Button>
+      </Button> */}
     </form>
   );
 };

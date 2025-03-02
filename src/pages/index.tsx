@@ -1,5 +1,26 @@
-import ParkaSWebsite from "@/components/ParkaSWebsite";
+import { Footer, Navbar } from "@/components";
+import {
+  AboutSection,
+  BusinessBenefitsSection,
+  HeroSection,
+  HowItWorksSection,
+  SolutionSection,
+  WhyChooseSection,
+} from "@/components/sections";
 
 export default function Home() {
-  return <ParkaSWebsite />;
+  return (
+    <div className="bg-[#021114] text-white font-sans">
+      <Navbar />
+      <main>
+        <HeroSection />
+        <AboutSection />
+        <SolutionSection />
+        <WhyChooseSection />
+        <HowItWorksSection />
+        <BusinessBenefitsSection />
+      </main>
+      <Footer />
+    </div>
+  );
 }

@@ -3,7 +3,6 @@ import React from "react";
 import { useForm } from "react-hook-form";
 import { z } from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
-import { Button } from "../components/ui/Button";
 
 const formSchema = z.object({
   name: z.string().min(2, { message: "Name must be at least 2 characters" }),
@@ -102,9 +101,9 @@ const ContactForm: React.FC = () => {
         )}
       </div>
 
-      <Button type="submit" disabled={isSubmitting} className="w-full">
+      {/* <Button type="submit" disabled={isSubmitting} className="w-full">
         {isSubmitting ? "Sending..." : "Send Message"}
-      </Button>
+      </Button> */}
     </form>
   );
 };
