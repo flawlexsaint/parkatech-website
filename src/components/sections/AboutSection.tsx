@@ -1,12 +1,12 @@
 import React from "react";
 import Container from "../Container";
-import ScrollVelocity from "../ui/scroll-velocity";
+import InfiniteImageCarousel from "../ui/infinite-moving-cards";
 
 const AboutSection: React.FC = () => {
   return (
     <Container>
       <section
-        className="justify-center items-center bg-[#CAF0F8] flex w-full flex-col overflow-hidden px-20 py-[122px] max-md:max-w-full max-md:px-5 max-md:py-[70px]"
+        className="justify-center items-center relative bg-[#CAF0F8] flex w-full flex-col overflow-hidden px-20 py-[142px] max-md:max-w-full max-md:px-5 max-md:py-[70px]"
         id="about"
       >
         <Container className="w-[55%]">
@@ -22,10 +22,10 @@ const AboutSection: React.FC = () => {
             About Us
           </h1>
         </Container>
+        <Container className="absolute bottom-[-50px]">
+          <InfiniteImageCarousel />
+        </Container>
       </section>
-      {/* <Container className="mt-[-460px]">
-        <ScrollVelocity velocity={100} className="px-0 mx-0" />
-      </Container> */}
     </Container>
   );
 };
