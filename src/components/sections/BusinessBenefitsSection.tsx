@@ -14,7 +14,7 @@ const BusinessBenefitsSection: React.FC = () => {
 
   const handleJoinNow = () => {
     window.open(
-      "https://docs.google.com/forms/d/e/1FAIpQLSd-pEsKiYL-2iKF_okxCVbeZW-XtSRQ1WzPAjuuorpZ3Vn3DA/viewform?usp=header",
+      "https://docs.google.com/forms/d/e/1FAIpQLSfPx7gErUbeJ3sPvO-6ugrFoEMKQuXcultWdVrSA0ibJ8GCfw/viewform?usp=header",
       "_blank"
     );
   };
