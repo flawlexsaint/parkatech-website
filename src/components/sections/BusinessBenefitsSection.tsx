@@ -5,6 +5,13 @@ import Image from "next/image";
 import Container from "../Container";
 
 const BusinessBenefitsSection: React.FC = () => {
+  const handleContactUs = () => {
+    window.open(
+      "https://docs.google.com/forms/d/e/1FAIpQLScKB-FwmrL49M06zXhjpA36OvVuQhjHJvQxChkO4C6gZ02aCw/viewform?usp=header",
+      "_blank"
+    );
+  };
+
   return (
     <Container className="py-[68px] xl:py-[173px]">
       <section
@@ -34,7 +41,10 @@ const BusinessBenefitsSection: React.FC = () => {
       </section>
       <Container className="w-[90%]">
         <div className="flex items-center justify-center my-[74px]">
-          <button className="h-[58px] rounded-[12px] font-semibold text-[20px] text-[#031317] md:min-w-[552px] min-w-full bg-white">
+          <button
+            onClick={handleContactUs}
+            className="h-[58px] rounded-[12px] font-semibold text-[20px] text-[#031317] md:min-w-[552px] min-w-full bg-white"
+          >
             Contact Us
           </button>
         </div>
@@ -49,7 +59,10 @@ const BusinessBenefitsSection: React.FC = () => {
             Join Parkatech to sell from anywhere and earn big commissions.
           </p>
           <div className="flex justify-center">
-            <button className="h-[64px] flex justify-center items-center rounded-[12px] font-semibold text-[24px] text-[#031317] mt-10  w-[202px] bg-[#CAF0F8]">
+            <button
+              onClick={handleContactUs}
+              className="h-[64px] flex justify-center items-center rounded-[12px] font-semibold text-[24px] text-[#031317] mt-10  w-[202px] bg-[#CAF0F8]"
+            >
               Join Now
             </button>
           </div>
