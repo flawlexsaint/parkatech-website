@@ -9,7 +9,7 @@ import Image from "next/image";
 export function SolutionSection() {
   return (
     <div id="our-solution">
-      <Container className="w-[95%] md:w-[80%] py-[60px] md:py-[174px]">
+      <Container className="w-[95%] md:w-[80%] 3xl:w-[40%] py-[60px] md:py-[174px]">
         <Container className="mb-[48px]">
           <h1 className="text-center font-semibold text-[36px] md:text-[80px] text-[#E8F9FC]">
             Our Solution

@@ -41,12 +41,12 @@ export default function HowItWorksSection() {
           <div className="mt-12 relative">
             {/* Vertical Timeline Line */}
             <div className="absolute left-1/2 transform -translate-x-1/2 top-[60px] bottom-[60px] h-[80%] w-[1px] bg-[#4BCDE7] block"></div>
-            <Container className="w-[90%] xl:w-[55%]">
+            <Container className="w-[90%] xl:w-[55%] 3xl:w-[40%]">
               <div className="flex flex-col space-y-10 relative">
                 {steps.map((step, index) => (
                   <div
                     key={step.id}
-                    className={`flex items-center w-[40%] lg:w-[50%]${
+                    className={`flex items-center w-[40%] 3xl:w-[30%] lg:w-[50%]${
                       index % 2 === 0
                         ? "mr-auto pl-0 text-right"
                         : "pl-10 ml-auto"

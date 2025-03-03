@@ -14,7 +14,7 @@ const Navbar: React.FC = () => {
     <nav className="md:pt-[98px] pt-[48px] top-[-40px] md:top-[-90px] sticky z-100">
       <Container
         className={cn(
-          "w-[95%] md:w-[80%] bg-[rgba(0,0,0,0.27)] backdrop-blur-sm h-[76px] px-4 flex items-center justify-between",
+          "w-[95%] md:w-[80%] 3xl:w-[40%] bg-[rgba(0,0,0,0.27)] backdrop-blur-sm h-[76px] px-4 flex items-center justify-between",
           !isOpen && "rounded-[11px]"
         )}
       >

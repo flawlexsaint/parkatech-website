@@ -8,7 +8,7 @@ const WhyChooseSection: React.FC = () => {
   const inView = useInView(ref, { amount: 0.5, once: false });
 
   return (
-    <Container className="w-[95%] md:w-[80%]">
+    <Container className="w-[95%] md:w-[80%] 3xl:w-[40%]">
       <section
         id="why-choose-parkatech"
         className="py-[50px] md:py-[180px]"

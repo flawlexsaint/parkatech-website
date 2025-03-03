@@ -5,7 +5,7 @@ import Logo from "../../public/assets/images/Logo.svg";
 
 const Footer: React.FC = () => {
   return (
-    <Container className="w-[80%]">
+    <Container className="w-[80%] 3xl:w-[40%]">
       <footer className="w-full mt-[110px] max-md:max-w-full max-md:mt-10 pb-10">
         <div className="border bg-[#189AB4] min-h-0 w-full border-[rgba(24,154,180,1)] border-solid max-md:max-w-full" />
         <div className="block md:flex w-full gap-10 items-center justify-between mt-[27px] max-md:max-w-full">

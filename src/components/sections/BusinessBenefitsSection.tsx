@@ -7,7 +7,14 @@ import Container from "../Container";
 const BusinessBenefitsSection: React.FC = () => {
   const handleContactUs = () => {
     window.open(
-      "https://docs.google.com/forms/d/e/1FAIpQLScKB-FwmrL49M06zXhjpA36OvVuQhjHJvQxChkO4C6gZ02aCw/viewform?usp=header",
+      "https://docs.google.com/forms/d/e/1FAIpQLSd-pEsKiYL-2iKF_okxCVbeZW-XtSRQ1WzPAjuuorpZ3Vn3DA/viewform?usp=header",
+      "_blank"
+    );
+  };
+
+  const handleJoinNow = () => {
+    window.open(
+      "https://docs.google.com/forms/d/e/1FAIpQLSd-pEsKiYL-2iKF_okxCVbeZW-XtSRQ1WzPAjuuorpZ3Vn3DA/viewform?usp=header",
       "_blank"
     );
   };
@@ -39,7 +46,7 @@ const BusinessBenefitsSection: React.FC = () => {
           </div>
         </div>
       </section>
-      <Container className="w-[90%]">
+      <Container className="w-[90%] 3xl:w-[40%]">
         <div className="flex items-center justify-center my-[74px]">
           <button
             onClick={handleContactUs}
@@ -49,8 +56,7 @@ const BusinessBenefitsSection: React.FC = () => {
           </button>
         </div>
       </Container>
-
-      <Container className="bg-[#12212599] py-[47px] w-[90%] md:w-[65%] rounded-[20px]">
+      <Container className="bg-[#12212599] py-[47px] w-[90%] md:w-[65%] 3xl:w-[40%] rounded-[20px]">
         <Container className="w-[80%]">
           <h1 className="text-center text-white font-semibold text-[40px]">
             Earn Serious Money in Your Free Time
@@ -60,7 +66,7 @@ const BusinessBenefitsSection: React.FC = () => {
           </p>
           <div className="flex justify-center">
             <button
-              onClick={handleContactUs}
+              onClick={handleJoinNow}
               className="h-[64px] flex justify-center items-center rounded-[12px] font-semibold text-[24px] text-[#031317] mt-10  w-[202px] bg-[#CAF0F8]"
             >
               Join Now
